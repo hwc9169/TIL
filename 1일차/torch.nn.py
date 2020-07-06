@@ -3,14 +3,14 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 x_train = torch.FloatTensor([[1],[2],[3]])
-y_train = torch.FloatTensor([[2],[4],[6]])
+y_train = torch.FloatTensor([[1],[8],[27]])
 
 model = nn.Linear(1,1)
 print(list(model.parameters()))
 
 optimizer = torch.optim.SGD(model.parameters(),lr=0.01)
 
-epochs = 10000
+epochs = 100000
 for epoch in range(epochs+1):
     h = model(x_train)
     cost = F.mse_loss(h,y_train)
@@ -25,4 +25,3 @@ print("training end")
 x_test = torch.FloatTensor([[4],[5],[6]])
 y_test = model(x_test)
 print(y_test)
-print(list(model.parameters()))
