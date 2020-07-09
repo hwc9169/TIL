@@ -1,8 +1,10 @@
 import numpy as np
 import torch
+
 def step_func(x):
     y = x>0
     return y.astype(np.int)
+
 def AND(x1 ,x2):
     x = np.array([x1,x2])
     w = np.array([0.5,0.5])

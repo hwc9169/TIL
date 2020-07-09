@@ -17,7 +17,9 @@ epochs = 50000
 for epoch in range(epochs+1):
     h = model(x_train)
     cost = F.mse_loss(h, y_train)
-
+    costs.append(cost)
+    Ws.append()
+    
     optimizer.zero_grad()
     cost.backward()
     optimizer.step()

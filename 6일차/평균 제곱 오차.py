@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def MSE(x,y):
     return 0.5*np.sum((y-x)**2)
 
