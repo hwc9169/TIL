@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ef922626-f282-46f0-bd9b-3dc8921b07be" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/8Day/ReLU.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8Day/forward&amp;backward.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8Day/torch-mnist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TIL-ML-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TIL-ML-.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1일차/Custom Dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1일차/no_torch.nn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1일차/perceptron.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1일차/torch.nn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1일차/다중 선형 회귀.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1일차/로지스틱 회귀.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2일차/titanic competition.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3일차/house_price.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/4일차/mnist competitino.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5일차/3층 신경망.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5일차/계단함수.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5일차/소프트맥스.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5일차/시그모이드.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/6일차/교차 엔트로피.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/6일차/평균 제곱 오차.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/7일차/Multi_class_Classification.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/7일차/경사 하강 법.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/7일차/수치미분.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ef922626-f282-46f0-bd9b-3dc8921b07be" name="Default Changelist" comment="" />
+      <created>1594336631534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594336631534</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/8Day/forward&amp;backward.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
