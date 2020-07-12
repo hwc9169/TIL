@@ -16,7 +16,7 @@ torch.manual_seed(777)
 if device =='cuda':
     torch.cuda.manual_seed_all(777)
 
-epochs = 20
+epochs = 3
 batch_size =100
 
 train = dataset.MNIST(root='MNIST_data/',
@@ -60,7 +60,7 @@ for epoch in range(epochs+1): # 앞서 training_epochs의 값은 15로 지정함
 print('Learning finished')
 
 with torch.no_grad():
-    x_test = test.test_data.view(-1,28,28).float().to(device)
+    x_test = test.test_data.view(-1,28*28).float().to(device)
     y_test = test.test_labels.to(device)
 
     prediction = linear(x_test)
@@ -69,12 +69,9 @@ with torch.no_grad():
     print('Accuracy:',accuracy.item())
 
     r = random.randint(0, len(test) - 1)
-    x_single_data = test.test_labels[r:r+1].view(-1,28*28).float().to(device)
+    x_single_data = test.test_data[r:r+1].view(-1,28*28).float().to(device)
     y_single_data = test.test_labels[r:r+1].to(device)
 
     print('Label: ',y_single_data.item())
     single_prediction = linear(x_single_data)
     print('Prediction', torch.argmax(single_prediction,1).item())
-
-    plt.imshow(test.test_data[r:r+1].view(28,28), cmap='Greys' , interpolation='nearest')
-    plt.show()
