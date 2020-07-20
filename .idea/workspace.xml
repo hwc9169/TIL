@@ -20,15 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d5b1a86-86a4-4dd7-8806-813674814c82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/TIL-ML-.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10Day/torchtext_english.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10Day/torchtext_korean.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10Day/Tokenization.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/10Day/natural_text_preprocess.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/11Day/Word2Vec_eng.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TIL-ML-.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/10Day/torchtext_korean.py" beforeDir="false" afterPath="$PROJECT_DIR$/10Day/torchtext_korean.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TIL-BE-" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -112,10 +112,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1167" y="219" key="FileChooserDialogImpl" timestamp="1594968940882">
+    <state x="1139" y="357" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1595051135165">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1167" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594968940882" />
+    <state x="1139" y="357" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1595051135165" />
+    <state x="1167" y="219" key="FileChooserDialogImpl" timestamp="1595142797060">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1167" y="219" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595142797060" />
     <state width="930" height="271" key="GridCell.Tab.0.bottom" timestamp="1594990577496">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -132,9 +136,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="930" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594990577496" />
-    <state x="709" y="82" key="SettingsEditor" timestamp="1594993765388">
+    <state x="582" y="112" key="SettingsEditor" timestamp="1595051535234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="709" y="82" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594993765388" />
+    <state x="582" y="112" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1595051535234" />
   </component>
 </project>

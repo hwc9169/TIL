@@ -55,3 +55,6 @@ print('테스트 데이터의 미니 배치 수 : {}'.format(len(test_loader)))
 
 batch = next(iter(train_loader))
 print(batch.text)
+
+
+
