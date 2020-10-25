@@ -1,2 +1,3 @@
 # README.md
-> Machine Learning 학습 내용 정리
+> Machine Learning 학습 내용 기록
+
