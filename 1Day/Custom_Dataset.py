@@ -4,6 +4,7 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 
+
 class CustomDatast(Dataset):
     def __init__(self):
         self.x_data = [[73, 80, 75],
