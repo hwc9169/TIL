@@ -42,7 +42,7 @@ plt.imshow(grid.numpy().transpose((1,2,0)))
 plt.axis('off')
 plt.show()
 print(*list(train_df.iloc[random_sel, 0].values), sep = ', ')
-'''
+
 plt.rcParams['figure.figsize'] = (8, 5)
 plt.bar(train_df['label'].value_counts().index, train_df['label'].value_counts())
 plt.xticks(np.arange(n_class))
@@ -51,7 +51,7 @@ plt.ylabel('Count', fontsize=16)
 plt.grid('on', axis='y')
 plt.show()
 
-class MNIS_data(Dataset):
+class MNIST_data(Dataset):
   def __init__(self,file_path,transform=transforms.Compose([transforms.ToPTLImage(),transforms.ToTensor(),transforms.Normalize(mean=(0.5),std=(0.5))])):
     df = pd.read_csv(file_path)
 
@@ -275,7 +275,7 @@ out_df = pd.DataFrame(np.c_[np.arange(1, len(test_dataset)+1)[:,None], test_pred
 print(out_df.head())
 
 out_df.to_csv('./output/submission.csv',index=False)
-'''
+
 
 
 
