@@ -9,6 +9,7 @@ from scipy import stats
 from scipy.stats import norm, skew
 
 import os
+
 if not os.path.exists('./output'):
   os.mkdir('./output')
 
