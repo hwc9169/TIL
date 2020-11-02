@@ -12,6 +12,7 @@ from torch.autograd import Variable
 
 torch.manual_seed(0)
 
+
 import os
 if not os.path.exists('./output'):
     os.mkdir('./output')
