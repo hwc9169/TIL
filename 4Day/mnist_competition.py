@@ -51,8 +51,13 @@ plt.ylabel('Count', fontsize=16)
 plt.grid('on', axis='y')
 plt.show()
 
+transform = transforms.COmpose([
+  transforms.ToPILImage(),
+  transforms.ToTensor(),
+  transforms.Normalize(mean(0.5), std=(0.5))
+])
 class MNIST_data(Dataset):
-  def __init__(self,file_path,transform=transforms.Compose([transforms.ToPTLImage(),transforms.ToTensor(),transforms.Normalize(mean=(0.5),std=(0.5))])):
+  def __init__(self,file_path,transform=transform):
     df = pd.read_csv(file_path)
 
     if len(df.columns) == n_pixels:
@@ -61,7 +66,7 @@ class MNIST_data(Dataset):
     else:
       self.X = df.iloc[:,1:].values.reshape((-1,28,28)).astype(np.uint8)[:,:,:,None]
       self.y = torch.from_numpy(df.iloc[:,0].values)
-    self.transform = transform
+      self.transform = transform
 
   def __len__(self):
     return len(self.X)
@@ -117,7 +122,7 @@ train_dataset = MNIST_data('./mnist_train.csv',transform = transforms.Compose(
   transforms.ToTensor(),transforms.Normalize(mean=(0.5,), std=(0.5,))]))
 test_dataset = MNIST_data('./mnist_test.csv')
 
-train_loader = torch.utils.data.DataLoader(datset=train_datset, batch-size = batch_size,shuffle=True)
+train_loader = torch.utils.data.DataLoader(dataset=train_datset, batch-size = batch_size,shuffle=True)
 test_loader = torch.utils.data.DataLoader(dataset=test_dataset,batch_size=batch_size,shuffle=False)
 
 rotate = RandomRotation(20)
@@ -143,7 +148,7 @@ class Net(nn.Module):
       nn.Conv2d(1,32,kernel_size=3,stride=1,padding=1),
       nn.BatchNorm2d(32),
       nn.ReLU(inplace=True),
-      nn.COnv2d(32,32,kenel_size=3,stride=1,padding =1),
+      nn.Conv2d(32,32,kenel_size=3,stride=1,padding =1),
       nn.BatchNorm2d(32),
       nn.ReLU(inplace=True),
       nn.MaxPool2d(kernel_size=2,stride=2),
@@ -266,7 +271,7 @@ def prediction(data_loader):
     test_pred = torch.cat((test_pred, pred), dim=0)
 
   return test_pred
-
+  
 test_pred = prediciton(test_loader)
 out_df = pd.DataFrame(np.c_[np.arange(1, len(test_dataset)+1)[:,None], test_pred.numpy()], 
                       columns=['ImageId', 'Label'])
