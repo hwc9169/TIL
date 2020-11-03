@@ -12,3 +12,4 @@ print(cost)
 x = np.array([0.1,0.05,0.1,0.0,0.05,0.1,0.0,0.6,0.0,0.0])
 cost = MSE(x,y)
 print(cost)
+
