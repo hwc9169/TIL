@@ -88,4 +88,4 @@ with torch.no_grad():
     prediction = model(x_test)
     correct_prediction = torch.argmax(prediction, 1) == y_test
     accuracy = correct_prediction.float().mean()
-    print('Accuracy', accuracy.item())
+    print('Accuracy', accuracy.item()) 
