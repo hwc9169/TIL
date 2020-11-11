@@ -26,7 +26,7 @@ mnist_test = datasets.MNIST(root='MNIST_data/',
                             transform=transforms.ToTensor(),
                             download=True)
 
-data_load = DataLoader(dataset=mnist_train,
+data_load = DataLoader(dataset=mnist_train, 
                        shuffle=True,
                        drop_last=True,
                        batch_size=batch_size)
