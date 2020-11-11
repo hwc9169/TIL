@@ -30,4 +30,4 @@ cell = nn.RNN(input_size=5, hidden_size=8, num_layers=2, batch_first=True, bidir
 outputs, status = cell(inputs)
 
 print(outputs.shape) #torch.Size([1, 10, 8x2])
-print(status.shape) #torch.Size([2x2, 1 ,8])
+print(status.shape) #torch.Size([2x2, 1 ,8]) 
