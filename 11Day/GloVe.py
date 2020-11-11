@@ -15,7 +15,7 @@ target_text = etree.parse(targetXML)
 parse_text = '\n'.join(target_text.xpath('//content/text()'))
 content_text = re.sub(r'\([^)]*\)', '', parse_text)
 sent_text = sent_tokenize(content_text)
-
+ 
 normalized_text =[]
 for string in sent_text:
   tokens = re.sub(r"[^a-z0-9]+", " ",string.lower())
