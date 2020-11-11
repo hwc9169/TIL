@@ -21,5 +21,5 @@ def f1(x):
 x = [[np.arange(-20.0, 20.0 , 0.1)],[np.arange(-20.0, 20.0 , 0.1)]]
 plt.plot(x,f4(x))
 plt.xlabel('x')
-plt.ylabel('f(x)')
+plt.ylabel('f(x)') 
 plt.show()
