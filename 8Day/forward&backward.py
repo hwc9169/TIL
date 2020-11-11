@@ -63,5 +63,5 @@ dapple, dapple_num = apple_mul_layer.backward(dapple_price)
 dorange, dorange_num = orange_mul_layer.backward(dorange_price)
 
 print(price)
-print(dapple_num,dapple,dorange,dorange_num,dtax)
+print(dapple_num,dapple,dorange,dorange_num,dtax) 
 
