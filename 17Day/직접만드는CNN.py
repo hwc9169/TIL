@@ -73,12 +73,13 @@ def fit(epoch, model, data_loader, phase='training', volatile=False):
     for batch_idx, (data, target) in enumerate(data_loader):
         if is_cuda:
             data, target = data.cuda(), target.cuda()
-        data, target = Variable(data, volatile), Variable(target)
+        data, target = Variable(data), Variable(target)
         if phase == 'training':
             optimizer.zero_grad()
         output = model(data)
+        print(output.shape, target.shape)
         loss = F.nll_loss(output, target)
-    
+
         running_loss += loss
         pred = torch.argmax(output, 1)
         running_correct += torch.sum(pred == target)
@@ -98,7 +99,7 @@ model = Net()
 optimizer = torch.optim.SGD(model.parameters(), lr=0.01, momentum=0.5)
 train_losses, train_accuracy = [], []
 val_losses, val_accuracy = [], []
-for epoch in range(1, 20):
+for epoch in range(1, 5):
     epoch_loss, epoch_accuracy = fit(epoch, model, train_loader, phase='training')
     val_epoch_loss, val_epoch_accuracy = fit(epoch, model, test_loader, phase='validation')
     train_losses.append(epoch_loss)
@@ -106,6 +107,15 @@ for epoch in range(1, 20):
     val_losses.append(val_epoch_loss)
     val_accuracy.append(val_epoch_accuracy)
 
-plt.plot(range(1, len(train_losses)+1), train_losses, 'bo', label='학습 오차')
-plt.plot(range(1, len(val_losses)+1), val_losses, 'r', label='검증 오차')
-plt.legend()
+fig = plt.figure()
+loss = fig.add_subplot(1,2,1)
+accuracy = fig.add_subplot(1,2,2)
+loss.plot(range(1, len(train_losses)+1), train_losses, 'bo', label='학습 오차')
+loss.plot(range(1, len(val_losses)+1), val_losses, 'r', label='검증 오차')
+loss.legend()
+
+accuracy.plot(range(1, len(train_accuracy)+1), train_accuracy, 'bo', label='학습 오차')
+accuracy.plot(range(1, len(val_accuracy)+1), val_accuracy, 'r', label='검증 오차')
+accuracy.legend()
+
+plt.show()
