@@ -29,21 +29,25 @@ transform = transforms.Compose([
     transforms.Normalize(0.5, 0.5)
 ])
 # 이미지 데이터
-train = ImageFolder('./train/', transform=transform)
-valid = ImageFolder('./valid/', transform=transform)
+train = ImageFolder('./16Day/train/', transform=transform)
+valid = ImageFolder('./16Day/valid/', transform=transform)
+
 # 데이터 로더
 trainloader = DataLoader(train, batch_size=64, num_workers=2, shuffle=True)
 validloader = DataLoader(valid, batch_size=64, num_workers=2, shuffle=True)
 
 dataloader = {'train': trainloader, 'valid': validloader}
 datalen = {'train': len(trainloader.dataset), 'valid': len(validloader.dataset)}
+
 #모델 생성(pretrained)
 model_ft = models.resnet18(pretrained=True)
 num_ftrs = model_ft.fc.in_features
 model_ft.fc = nn.Linear(num_ftrs, 2)
+
 #GPU 사용
 if is_cuda:
     model_ft = model_ft.cuda()
+
 #최적화, 손실함수 정의
 learning_rate = 0.001
 criterion = nn.CrossEntropyLoss()
@@ -94,7 +98,7 @@ def train_model(model, criterion, optimizer, schedular, epochs=25):
                 running_loss += loss.item()      
                 runnin
                     epoch_loss = running_loss/datalen[phase]
-            epoch_acc = running_corrects/datalen[phase]
+                epoch_acc = running_corrects/datalen[phase]
 
             print('{} Loss: {:.4f} Acc: {:.4f}'.format(phase, epoch_loss, epoch_acc))
 
