@@ -4,3 +4,4 @@ train/
 valid/
 data/
 .vscode/
+MNIST/
